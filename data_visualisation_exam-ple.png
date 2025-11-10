@@ -1,0 +1,27 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create a DataFrame with sample economic growth data
+data = {
+    "Year": [2018, 2019, 2020, 2021, 2022, 2023],
+    "Growth": [2.5, 2.8, -1.2, 3.0, 2.7, 3.2]  # Example growth rates (%)
+}
+
+df = pd.DataFrame(data)
+
+# Plot the line chart
+plt.figure(figsize=(8, 5))
+plt.plot(df["Year"], df["Growth"], marker="o", linestyle="-", color="blue")
+
+# Add titles and labels
+plt.title("Economic Growth (2018 - 2023)")
+plt.xlabel("Year")
+plt.ylabel("Growth Rate (%)")
+
+# Add grid for readability
+plt.grid(True)
+
+# Show the chart
+plt.savefig("economic_growth.png")
+plt.show()
+
